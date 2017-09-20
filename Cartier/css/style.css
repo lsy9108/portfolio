@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*    Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none;	color:#bbb;}
+img { border:0;}
+
+/*배경이미지 설정*/
+.wrap { position:fixed; width:100%; height:100%; min-width:1024px; min-height:768px; background:url(../img/bg.jpg) no-repeat center bottom; background-size:cover;}
+
+/* 로고 영역 */
+.wrap h1 { position:fixed; width:300px; top:240px; left:0px; text-align:center; line-height:0.8;}
+.wrap h1 strong { font:bold 16px/1.1 verdana; color:#333;}
+.wrap h1 span { font:bold 12px/1.6 arial; color:#444; letter-spacing: 5px;}
+
+/* 슬로건 영역 */
+.txt { position:fixed; top:400px; left:40px; font:30px/0.8 Raleway; color:#111; letter-spacing:0px;}
+.txt span { font-size: 30px; color: #888;}
+
+/* 웹 아이콘 버튼 모음 */
+.sns { position:fixed; top:50px; right:50px; z-index: 10;}
+.sns li { float:left; margin-left:30px;}
+.sns li a .fa{color:#555; font-size: 22px; opacity:.7; transition:all .5s;}
+.sns li a:hover .fa {
+    opacity:1;
+    transform:scale(2);
+    text-shadow:0    -1px  2px #fff,
+                0     0    4px #ccc,
+                0    -5px  4px #ccc,
+                2px  -10px 6px #fd3,
+                -2px -15px 11px #f80,
+                2px  -19px 18px #f20;
+}
+
+/* section 영역 레이아웃 */
+section { position:fixed; top:0px; right:0px; width:100%; height:100%;}
+article { position:relative; width:12%; height:100%; background:url(../img/divider.png) no-repeat left center; float:right; overflow:hidden;}
+
+/* article 제목 */
+article h2 { position:absolute; top:300px; left:20px; padding-left:15px; border-left:3px solid #555; font:bold 20px Raleway; color:#666; z-index: 3; transition:all 0.5s;}
+article div { position:absolute; left:0px; top:300px; width:100%; height:0px; background:#000; opacity:0.5; z-index: 2; transition:all 0.5s;}
+
+/* article 제목 호버 효과*/
+article:hover h2 { color:#ccc; border-left:3px solid #ccc;}
+article:hover div { top:270px; height:70px;}
+
+/* article 동영상 */
+article video { position:absolute; width:auto; height:100%; margin-top:0px; margin-left:-100px; opacity:0; z-index: 1;}
+
+/* article 숨겨진 콘텐츠 */
+article h3 { position:absolute; bottom:210px; right:-310px; font:40px Raleway; color:#fff; text-align:right; opacity:1; z-index: 4;}
+article p { position:absolute; bottom:50px; right:-310px; width:300px; height:150px; font:12px/1.5 arial; color:#fff; text-align:right; opacity:0.8; z-index: 5;}
+
+/* footer */
+footer { position:fixed; width:100%; height:40px; left:0px; bottom:0px; background:#000; font:12px/3.3 verdana; color:#fff; letter-spacing: 2px; opacity:0.4; z-index: 10;}
+
+/* 메뉴 1depth */
+footer>ul { position:absolute; bottom:0px; left:50px; width:100%; z-index: 10;}
+footer>ul>li { position:relative; width:200px; height:40px; text-align: center; box-sizing: border-box; perspective:700px; float:left;}
+footer>ul>li>a { display:block; width:200px; height:40px; font:12px/4 orbitron; color:#aaa; transition:all 0.5s;}
+/*호버시 투명도를 0으로 translateY속성으로 위로 20만큼 살짝올림*/
+footer>ul>li:hover>a { transform:translateY(-20deg); color:#000; background-color:#fff; font:bold 16px;}
+
+/* 메뉴 2depth */
+footer>ul>li>ul { position:absolute; left:0; bottom:-50px; width:200px; height:500px; background-color:rgba(0,0,0,0.6); border:1px solid #000; box-sizing: border-box; /*opacity:0;*/display:none; transition:all 0.5s; padding:10px;}
+footer>ul>li:hover ul { /*opacity:1;*/display:block; bottom:40px; transform:rotateY(360deg);}
+footer>ul>li>ul>li>a{display:block; width:100%; height:37px; border-top:1px solid #111; color:#ddd; text-align:center; font:11px /2.8 orbitron; color:#888; transition:all 0.4s;}
+footer>ul>li>ul>li>a:hover { background:#000; color:#fff;}
+
+/*
+footer ul { position:absolute; bottom:0; left:50px;}
+footer ul li { float:left; margin-left:40px; }
+*/
+footer span { position:absolute; right:50px; bottom:0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

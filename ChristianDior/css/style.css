@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Poiret+One);
+
+/*  Reset CSS  */
+* { margin:0;  padding:0;}
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#111; }
+img { border:0;}
+body { } 
+input, img { vertical-align:top;}
+
+
+h1{position:fixed; top:50px; left:100px; z-index: 2;}
+h1 img{width:300px;}
+.sns{position:fixed; right:100px; top:40px; z-index: 3;}
+.sns li{float:left; margin:0 10px; opacity:.5;  cursor:pointer;}
+.sns li i{font-size:25px; color:#111; transition:all 0.5s;}
+.sns li i:hover{transform:scale(1.4); opacity:1;}
+
+.frame {
+    position:fixed; width:100%; height:100%; font:12px/1.6 arial; color:#555; background:url(../img/bg.png) no-repeat center top; background-size:cover; min-width:1200px; 
+}
+#wrap {
+    position:fixed; width:1200px; left:50%; margin-left:-600px; top:300px; transition:all 1s; z-index: 10; /*border:1px solid #111;*/}
+#wrap:hover {top:150px;
+}
+
+#wrap>div {
+    position:relative; width:100%; height:60px; border-bottom:1px solid #111; transition:all 1s; overflow:hidden; cursor:pointer; }
+#wrap>div:hover { height:380px;
+}
+#wrap>div>video {
+    position:absolute; width:100%; opacity:0; left:0; top:-200px; z-index: 99; transition:all 1s;}
+#wrap>div:hover>video { opacity:0.8;
+}
+
+#wrap>div h2{
+    position:absolute; left:0; bottom:-10px; font:bold 40px "poiret one"; color:#111; transition:all 1s; }
+#wrap>div:hover h2{ bottom:80px; left:700px; font-size:80px; color:#fff;
+}
+#wrap>div>img{
+    position:absolute; width:30px; right:0; bottom:5px; transition:all 0.5s;}
+#wrap>div:hover>img { transform:rotate(135deg);
+}
+
+p.txt { position:fixed; bottom:-150px; right:0; font-size:150px; color:#000; font-family:"poiret one"; opacity:.4; z-index: 2;}
+p.txt span { font-size:350px;}
+
+
+
+
+
+
+
+
+
+
